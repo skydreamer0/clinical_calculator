@@ -18,7 +18,7 @@ const RISK = {
     label: '中度風險', en: 'Intermediate',
     color: '#92400e', bg: '#fffbeb', border: '#fcd34d', header: '#d97706',
     range: 'FIB-4 1.3–2.67', lsm: 'LSM 8–12 kPa',
-    action: '每 3–6 個月監控，建議轉介肝膽腸胃科',
+    action: '每 3–6 個月密切監控，定期追蹤肝功能',
   },
   high: {
     label: '高風險', en: 'High Risk',
