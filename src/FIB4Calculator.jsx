@@ -24,7 +24,7 @@ const RISK = {
     label: '高風險', en: 'High Risk',
     color: '#991b1b', bg: '#fef2f2', border: '#fca5a5', header: '#dc2626',
     range: 'FIB-4 > 2.67', lsm: 'LSM > 12 kPa',
-    action: '強烈建議轉介肝膽腸胃科專科評估',
+    action: '每 3 個月密切監控，定期追蹤肝功能',
   },
 };
 
@@ -102,13 +102,11 @@ export default function FIB4Calculator() {
                 gap: 12,
               }}
             >
-              {/* Label column */}
               <div style={{ width: 68, flexShrink: 0 }}>
                 <div style={{ fontSize: 14, fontWeight: 700, color: '#1e293b' }}>{label}</div>
                 <div style={{ fontSize: 11, color: '#94a3b8', marginTop: 1 }}>{unit}</div>
               </div>
 
-              {/* Input */}
               <input
                 ref={el => refs.current[key] = el}
                 type="number"
@@ -130,7 +128,6 @@ export default function FIB4Calculator() {
                 }}
               />
 
-              {/* Hint */}
               <div style={{ fontSize: 11, color: '#94a3b8', flexShrink: 0, width: 64, textAlign: 'right', lineHeight: 1.3 }}>
                 {hint}
               </div>
@@ -178,7 +175,6 @@ export default function FIB4Calculator() {
               animation: 'slideUp 0.28s cubic-bezier(0.16,1,0.3,1)',
             }}
           >
-            {/* Colored header strip */}
             <div style={{
               background: cfg.header,
               padding: '12px 16px',
@@ -191,7 +187,6 @@ export default function FIB4Calculator() {
               <span style={{ color: 'rgba(255,255,255,0.75)', fontSize: 12 }}>{cfg.range}</span>
             </div>
 
-            {/* Score */}
             <div style={{ background: cfg.bg, padding: '20px 16px 16px', textAlign: 'center' }}>
               <div style={{
                 fontSize: 60, fontWeight: 900, lineHeight: 1,
@@ -203,7 +198,6 @@ export default function FIB4Calculator() {
               <div style={{ fontSize: 11, color: '#94a3b8', letterSpacing: '0.1em', marginTop: 4 }}>FIB-4 INDEX</div>
             </div>
 
-            {/* Details */}
             <div style={{
               background: cfg.bg,
               borderTop: `1px solid ${cfg.border}`,
